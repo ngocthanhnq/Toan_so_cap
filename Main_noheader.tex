@@ -1,0 +1,51 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{tasks}
+\usepackage{extsizes}
+\usepackage{amsmath,amssymb,yhmath,mathrsfs,fontawesome}
+\usepackage{fancyhdr}
+\usepackage{tasks}
+\usepackage{tkz-euclide}
+\usepackage{tikz-3dplot}
+\usepackage{tikz,tkz-tab-vn}
+\usetikzlibrary{shapes.geometric,arrows,calc,intersections,angles,patterns,snakes,positioning}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.9}
+%\renewcommand{\baselinestretch}{1.1}
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm] {geometry}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{currfile}
+\usepackage{ex_test}
+%\usepackage[loigiai]{ex_test}
+\usepackage{maybemath}
+\usepackage{pifont}
+\usepackage{esvect}
+\usepackage{lastpage}
+\def\vec{\vv}
+\def\overrightarrow{\vv}
+\begin{document}
+\begin{ex}
+Cho tập hợp $X = \{x | x \in F, -5 \le x \le 5, x \neq 0\}$. Chọn ngẫu nhiên $4$ số đôi một phân biệt $a,b,c,d \in X$. Tính xác suất để hàm số $y = \dfrac{ax+b}{cx+d}$ với $ad \neq bc$, có đồ thị $(C)$ mà cả $(C)$ lẫn tiệm cận đứng của $(C)$  đều cắt trục Ox theo chiều dương.$\phantom{o}^{(***)}$
+\begin{flushright}
+(Thi HSG lớp 12 TP. Hồ Chí Minh).
+\end{flushright}
+\centerline{\textbf{Lời giải}}
+Vì $(C)$ cắt trục $Ox$ theo chiều dương nên $y = 0$ và có nghiệm $x_0 > 0 \Rightarrow \dfrac{-b}{a}>0  \Rightarrow ab<0$.\\
+Tiệm cận đứng của $(C)$ cắt trục $Ox$ theo chiều dương nên $ \dfrac{-d}{c}>0 \Rightarrow cd<0.$\\
+Gọi $A$ là biến cố ``chọn ngẫu nhiên $4$ số đôi một phân biệt $a, b, c, d \in X$ để hàm số $y = \dfrac{ax+b}{cx+d}$ với $ad \neq bc$, có đồ thị $(C)$ mà cả $(C)$ lẫn tiệm cận đứng của (C) đều cắt trục Ox theo chiều dương'' thì ta cần chọn $4$ số $a, b, c, d$ thỏa các điều kiện $\left\{ \begin{array}{l}
+ ad < 0 \\ 
+ cd < 0 \\ 
+ ad \ne bc \\ 
+ \end{array} \right.$\\
+Số cách chọn cặp số $(a;b)$ là $10.5 = 50$ cách chọn.\\
+Số cách chọn cặp số $(c;d)$ là $8.4 = 32$ cách chọn.\\ 
+Số cách chọn các số $a, b, c, d$ thỏa $ad = bc$ là:
+\begin{itemize}
+\item Nếu $\dfrac{a}{b} = -1$ thì có $10$ cách chọn cặp $(a;b)$ và có $8$ cách chọn cặp $(c;d).$
+\item Nếu $\dfrac{a}{b}=-2$ hoặc $ \dfrac{a}{b} = \dfrac{-1}{2}$ thì có $4$ cách chọn $(a;b)$ và có $2$ cách chọn $(c;d)$.
+\item Nếu $\dfrac{a}{b} \notin \lbrace \dfrac{-1}{2};-1;-2 \rbrace$ thì có $50 - (10 +4 +4) = 32$ cách chọn cặp $(a;b)$ và tương ứng sẽ có $1$ cách chọn cặp $(c;d) = (-a;-b)$ 
+\end{itemize} 
+Số phần tử của biến cố $A$ là $n(A) = 50.32 - (10.8 + 2.4.2 + 32) = 1472$ cách chọn.\\
+Vậy xác suất của biến cố $A$ là $P(A) = \dfrac{n(A)}{n(\Omega)}= \dfrac{1472}{5040} = \dfrac{92}{315}$.
+\end{ex}
+\end{document}
